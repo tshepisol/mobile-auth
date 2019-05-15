@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="PPS_TAMAuth_Service" targetNamespace="http://PPS.co.za/PPS_TAMAuth_Service/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://PPS.co.za/PPS_TAMAuth_Service/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://PPS.co.za/PPS_TAMAuth_Service/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="TAMAuthenticationRq">
+        <xsd:complexType>
+          <xsd:sequence>
+          	<xsd:element name="username" type="xsd:string"/>
+          	<xsd:element name="password" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="TAMAuthenticationRs">
+        <xsd:complexType>
+          <xsd:sequence>
+          	<xsd:element name="resultCode" type="xsd:string"/>
+          	<xsd:element name="resultMessage" type="xsd:string"/>
+      		<xsd:element maxOccurs="unbounded" minOccurs="0" name="groupList" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element> 
+      <xsd:element name="SOAPFormatException">
+      	<xsd:complexType>
+      		<xsd:sequence>
+      			<xsd:element name="res" type="xsd:string"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element> 
+     </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="TAMAuthenticationReq">
+    <wsdl:part element="tns:TAMAuthenticationRq" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="TAMAuthenticationRes">
+    <wsdl:part element="tns:TAMAuthenticationRs" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SOAPFormatException">
+    <wsdl:part element="tns:SOAPFormatException" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="PPS_TAMAuth_ServicePort">
+    <wsdl:operation name="TAMAuthentication">
+      <wsdl:input message="tns:TAMAuthenticationReq">
+    </wsdl:input>
+      <wsdl:output message="tns:TAMAuthenticationRes">
+    </wsdl:output>
+      <wsdl:fault message="tns:SOAPFormatException" name="SOAPFormatException">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PPS_TAMAuth_ServiceBind" type="tns:PPS_TAMAuth_ServicePort">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="TAMAuthentication">
+      <soap:operation soapAction="http://PPS.co.za/PPS_TAMAuth_Service/" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SOAPFormatException">
+        <soap:fault name="SOAPFormatException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PPS_TAMAuth_Service">
+    <wsdl:port binding="tns:PPS_TAMAuth_ServiceBind" name="PPS_TAMAuth_ServicePort">
+      <soap:address location="http://dr-qamwl-01.ppsdmn.co.za:9081/PPS_TAMAuth_Service/services/PPS_TAMAuth_ServicePort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,81 @@
+{
+  "username": null,
+  "role": null,
+  "cno": "106106004625",
+  "ino": null,
+  "imeistatus": "unverified",
+  "type": "Investor",
+  "title": "Mr",
+  "fname": "Tertius",
+  "lname": "Swart",
+  "fullname": "Mr T Swart",
+  "email": "cjohannes@ppsinvestments.co.za",
+  "mobile": "0843045840",
+  "id": "7806145045087",
+  "idtype": "ID",
+  "ppsmember": "124328792",
+  "mvdt": "2017-08-28",
+  "mv": "1482192.00",
+  "policies": [
+    {
+      "polno": "POL2008107217793",
+      "prodsuite": "PPS",
+      "prodcode": "106LNK",
+      "prodname": "PPS Investment Account",
+      "altname": "Isabel Swart Education Plan",
+      "fundrange": "O",
+      "mvdt": "2017-08-28",
+      "mv": "136617"
+    },
+    {
+      "polno": "POL2008294221208",
+      "prodsuite": null,
+      "prodcode": "106PRO",
+      "prodname": "PPS Preservation Provident Fund",
+      "altname": "",
+      "fundrange": "O",
+      "mvdt": "2017-08-28",
+      "mv": "578307"
+    },
+    {
+      "polno": "POL2010207234276",
+      "prodsuite": null,
+      "prodcode": "106RAF",
+      "prodname": "PPS Retirement Annuity",
+      "altname": "",
+      "fundrange": "O",
+      "mvdt": "2017-08-28",
+      "mv": "26172"
+    },
+    {
+      "polno": "POL2008107217793",
+      "prodsuite": null,
+      "prodcode": "106LNK",
+      "prodname": "PPS Investment Account",
+      "altname": "Isabel Swart Education Plan",
+      "fundrange": "O",
+      "mvdt": "2017-08-28",
+      "mv": "136617"
+    },
+    {
+      "polno": "POL2008294221208",
+      "prodsuite": null,
+      "prodcode": "106PRO",
+      "prodname": "PPS Preservation Provident Fund",
+      "altname": "",
+      "fundrange": "O",
+      "mvdt": "2017-08-28",
+      "mv": "578307"
+    },
+    {
+      "polno": "POL2010207234276",
+      "prodsuite": null,
+      "prodcode": "106RAF",
+      "prodname": "PPS Retirement Annuity",
+      "altname": "",
+      "fundrange": "O",
+      "mvdt": "2017-08-28",
+      "mv": "26172"
+    }
+  ]
+}

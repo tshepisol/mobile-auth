@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="PPS_IDM_Service" targetNamespace="http://PPS.co.za/PPS_IDM_Service/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://PPS.co.za/PPS_IDM_Service/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://PPS.co.za/PPS_IDM_Service/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="CreatePersonRq">
+      	<xsd:complexType>
+      		<xsd:sequence>
+      			<xsd:element name="userType" type="xsd:string"/>
+      			<xsd:element name="Name" type="xsd:string"/>
+      			<xsd:element name="Surname" type="xsd:string"/>
+      			<xsd:element name="Initials" type="xsd:string"/>
+      			<xsd:element name="idNumber" type="xsd:string"/>
+      			<xsd:element name="passportNnumber" type="xsd:string"/>
+      			<xsd:element name="username" type="xsd:string"/>
+      			<xsd:element name="password" type="xsd:string"/>
+      			<xsd:element name="memberNo" type="xsd:string"/>
+      			<xsd:element name="partyID" type="xsd:string"/>
+      			<xsd:element name="email" type="xsd:string"/>
+      			<xsd:element name="mobile" type="xsd:string"/>
+      			<xsd:element name="mobileContryCode" type="xsd:string"/>
+      			<xsd:element name="otpPreference" type="xsd:string"/>
+      			<xsd:element name="clientNumber" type="xsd:string"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="CreatePersonRs">
+        <xsd:complexType>
+          <xsd:sequence>
+          	<xsd:element name="resultCode" type="xsd:string"/>
+          	<xsd:element name="resultMessage" type="xsd:string"/>
+          	<xsd:element name="username" type="xsd:string"/>
+      		<xsd:element name="processID" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetPersonInfoRq">
+        <xsd:complexType>
+          <xsd:sequence>
+			<xsd:element name="userType" type="xsd:string"/>
+          	<xsd:element name="username" type="xsd:string"/>
+          	<xsd:element name="partyID" type="xsd:string"/>
+          	<xsd:element name="memberNo" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetPersonInfoRs">
+      	<xsd:complexType>
+      		<xsd:sequence>
+      			<xsd:element name="resultCode" type="xsd:string"/>
+      			<xsd:element name="resultMessage" type="xsd:string"/>
+      			<xsd:element name="userType" type="xsd:string"/>
+      			<xsd:element name="Name" type="xsd:string"/>
+      			<xsd:element name="Surname" type="xsd:string"/>
+      			<xsd:element name="Initials" type="xsd:string"/>
+      			<xsd:element name="idNumber" type="xsd:string"/>
+      			<xsd:element name="passportNnumber" type="xsd:string"/>
+      			<xsd:element name="username" type="xsd:string"/>
+      			<xsd:element name="password" type="xsd:string"/>
+      			<xsd:element name="memberNo" type="xsd:string"/>
+      			<xsd:element name="partyID" type="xsd:string"/>
+      			<xsd:element name="email" type="xsd:string"/>
+      			<xsd:element name="mobile" type="xsd:string"/>
+      			<xsd:element name="mobileContryCode" type="xsd:string"/>
+      			<xsd:element name="otpPreference" type="xsd:string"/>
+      			<xsd:element name="clientNumber" type="xsd:string"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetIDMRequestStatusRq">
+        <xsd:complexType>
+          <xsd:sequence>
+          	<xsd:element name="processID" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetIDMRequestStatusRs">
+        <xsd:complexType>
+          <xsd:sequence>
+          	<xsd:element name="resultCode" type="xsd:string"/>
+          	<xsd:element name="resultMessage" type="xsd:string"/>
+          	<xsd:element name="status" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ChangePasswordRq">
+        <xsd:complexType>
+          <xsd:sequence>
+			<xsd:element name="userType" type="xsd:string"/>
+          	<xsd:element name="username" type="xsd:string"/>
+          	<xsd:element name="partyID" type="xsd:string"/>
+          	<xsd:element name="memberNo" type="xsd:string"/>
+          	<xsd:element name="oldPassword" type="xsd:string"/>
+          	<xsd:element name="newPassword" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ChangePasswordRs">
+        <xsd:complexType>
+          <xsd:sequence>
+          	<xsd:element name="resultCode" type="xsd:string"/>
+          	<xsd:element name="resultMessage" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ResetPasswordRq">
+        <xsd:complexType>
+          <xsd:sequence>
+			<xsd:element name="userType" type="xsd:string"/>
+          	<xsd:element name="username" type="xsd:string"/>
+          	<xsd:element name="partyID" type="xsd:string"/>
+          	<xsd:element name="memberNo" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ResetPasswordRs">
+        <xsd:complexType>
+          <xsd:sequence>
+          	<xsd:element name="resultCode" type="xsd:string"/>
+          	<xsd:element name="resultMessage" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SOAPFormatException">
+      	<xsd:complexType>
+      		<xsd:sequence>
+      			<xsd:element name="res" type="xsd:string"/>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element> 
+     </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ResetPasswordRes">
+    <wsdl:part element="tns:ResetPasswordRs" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetPersonInfoRes">
+    <wsdl:part element="tns:GetPersonInfoRs" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ResetPasswordReq">
+    <wsdl:part element="tns:ResetPasswordRq" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordRes">
+    <wsdl:part element="tns:ChangePasswordRs" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetPersonInfoReq">
+    <wsdl:part element="tns:GetPersonInfoRq" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordReq">
+    <wsdl:part element="tns:ChangePasswordRq" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CreatePersonRes">
+    <wsdl:part element="tns:CreatePersonRs" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SOAPFormatException">
+    <wsdl:part element="tns:SOAPFormatException" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CreatePersonReq">
+    <wsdl:part element="tns:CreatePersonRq" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetIDMRequestStatusRes">
+    <wsdl:part element="tns:GetIDMRequestStatusRs" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetIDMRequestStatusReq">
+    <wsdl:part element="tns:GetIDMRequestStatusRq" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="PPS_IDM_ServicePort">
+    <wsdl:operation name="CreatePerson">
+      <wsdl:input message="tns:CreatePersonReq">
+    </wsdl:input>
+      <wsdl:output message="tns:CreatePersonRes">
+    </wsdl:output>
+      <wsdl:fault message="tns:SOAPFormatException" name="SOAPFormatException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonInfo">
+      <wsdl:input message="tns:GetPersonInfoReq">
+    </wsdl:input>
+      <wsdl:output message="tns:GetPersonInfoRes">
+    </wsdl:output>
+      <wsdl:fault message="tns:SOAPFormatException" name="SOAPFormatException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetIDMRequestStatus">
+      <wsdl:input message="tns:GetIDMRequestStatusReq">
+    </wsdl:input>
+      <wsdl:output message="tns:GetIDMRequestStatusRes">
+    </wsdl:output>
+      <wsdl:fault message="tns:SOAPFormatException" name="SOAPFormatException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input message="tns:ChangePasswordReq">
+    </wsdl:input>
+      <wsdl:output message="tns:ChangePasswordRes">
+    </wsdl:output>
+      <wsdl:fault message="tns:SOAPFormatException" name="SOAPFormatException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ResetPassword">
+      <wsdl:input message="tns:ResetPasswordReq">
+    </wsdl:input>
+      <wsdl:output message="tns:ResetPasswordRes">
+    </wsdl:output>
+      <wsdl:fault message="tns:SOAPFormatException" name="SOAPFormatException">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PPS_IDM_ServiceBind" type="tns:PPS_IDM_ServicePort">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="CreatePerson">
+      <soap:operation soapAction="http://PPS.co.za/PPS_IDM_Service/" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SOAPFormatException">
+        <soap:fault name="SOAPFormatException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonInfo">
+      <soap:operation soapAction="http://PPS.co.za/PPS_IDM_Service/" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SOAPFormatException">
+        <soap:fault name="SOAPFormatException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetIDMRequestStatus">
+      <soap:operation soapAction="http://PPS.co.za/PPS_IDM_Service/" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SOAPFormatException">
+        <soap:fault name="SOAPFormatException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap:operation soapAction="http://PPS.co.za/PPS_IDM_Service/" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SOAPFormatException">
+        <soap:fault name="SOAPFormatException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ResetPassword">
+      <soap:operation soapAction="http://PPS.co.za/PPS_IDM_Service/" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SOAPFormatException">
+        <soap:fault name="SOAPFormatException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PPS_IDM_Service">
+    <wsdl:port binding="tns:PPS_IDM_ServiceBind" name="PPS_IDM_ServicePort">
+      <soap:address location="http://dr-qamwl-01.ppsdmn.co.za:9081/PPS_IDM_Service/services/PPS_IDM_ServicePort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
